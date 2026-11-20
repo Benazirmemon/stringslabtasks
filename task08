@@ -1,0 +1,16 @@
+#include<stdio.h>
+int calculatesum(int n){
+  if(n<=1){
+    return n;
+  }
+  int result= n+calculatesum(n-1);
+  return result;
+}
+int main(){
+  int number;
+  printf("enter a  positive number");
+  scanf("%d",&number);
+  int r;
+  r=calculatesum(number);
+  printf("sum of first %d natural num is %d",number,r);
+}
