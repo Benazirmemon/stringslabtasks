@@ -1,0 +1,38 @@
+#include<stdio.h>
+struct department{
+  int deptid;
+  char name[20];
+  int noofstd;
+  struct headdepartment{
+    int empid;
+    char empname[20];
+    char destination[20];
+  }head;
+};
+int main(){
+  struct department d;
+  printf("enter deptid");
+  scanf("%d",&d.deptid);
+  printf("enter the deptname");
+  scanf(" %[^\n]",d.name);
+  printf("enter the no of enrolledstd");
+  scanf(" %d",&d.noofstd);
+  printf("enter the empid");
+  scanf("%d",&d.head.empid);
+  printf("enter the emp name");
+  scanf(" %[^\n]",d.head.empname);
+  printf("enter the destination");
+  scanf(" %[^\n]",d.head.destination);
+  
+  printf(" deptid %d\n",d.deptid);
+  printf(" dept name %s\n",d.name);
+ printf(" no of std %d\n",d.noofstd);
+  printf("emp id %d\n",d.head.empid);
+   printf("emp name %s\n",d.head.empname);
+   printf("destination %s\n",d.head.destination);
+}
+  
+  
+  
+  
+
