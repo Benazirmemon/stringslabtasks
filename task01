@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+struct Patient {
+    int id;
+    char name[50];
+    int age;
+    float fee;
+};
+
+int main() {
+
+    struct Patient p;
+
+    printf("Enter Patient ID: ");
+    scanf("%d", &p.id);
+
+    printf("Enter Patient Name: ");
+    scanf(" %[^\n]", p.name); 
+
+    printf("Enter Age: ");
+    scanf("%d", &p.age);
+
+    printf("Enter Consultation Fee: ");
+    scanf("%f", &p.fee);
+
+    printf("Patient ID: %d\n", p.id);
+    printf("Patient Name: %s\n", p.name);
+    printf("Age: %d\n", p.age);
+    printf("Consultation Fee: %.2f\n", p.fee);
+
+}
