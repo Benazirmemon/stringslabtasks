@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+struct customer {
+    int id;
+    char name[50];
+    float units;
+    float rate;
+};
+void calculatebill(struct customer c);
+
+int main() {
+    struct customer cu;
+    printf("enter the customer id");
+    scanf("%d",&cu.id);
+    printf("enter the name");
+    scanf(" %[^\n]",cu.name);
+    printf("enter the consumed units");
+    scanf("%f",&cu.units);
+    printf("enter the rate");
+    scanf("%f",&cu.rate);
+    calculatebill(cu);
+}
+void calculatebill(struct customer c){
+    float electricitybill=c.units*c.rate;
+    printf("electricity bill %.2f",electricitybill);
+}
+
+
+   
+
+
